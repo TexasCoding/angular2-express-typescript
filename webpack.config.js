@@ -12,11 +12,17 @@ fs.readdirSync('node_modules')
   });
 
 module.exports = {
-  entry: './server/src/main.ts',
+  entry: './server/src/bin/www',
   target: 'node',
   output: {
     path: path.join(__dirname, 'dist/server'),
     filename: 'backend.js'
+  },
+  module: {
+    rules: [
+     
+      {test: /\.ts$/, use: 'ts-loader'}
+    ]
   },
   resolve: {
     // Add in `.ts` and `.tsx` as a resolvable extension.

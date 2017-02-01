@@ -5,9 +5,14 @@ import HeroController from '../controllers/HeroController';
 const router = express.Router();
 
 class HeroRoutes {
+    private _heroController: HeroController;
+
+    constructor() {
+        this._heroController = new HeroController();
+    }
 
     get routes() {
-        const controller = new HeroController();
+        const controller = this._heroController;
 
         router.get('/heros', controller.retrieve);
         router.post('/heros', controller.create);

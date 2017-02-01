@@ -1,0 +1,12 @@
+import {app} from '../main';
+import http from 'http';
+
+const server = http.createServer(app);
+
+const hostname = process.env.DB_HOST;
+
+server.listen(app.get('port'), hostname, function(){
+    const host = server.address().address;
+    const port = server.address().port;
+    console.log('This express angular app is listening on port: http://' + host + '::' + port);
+});
