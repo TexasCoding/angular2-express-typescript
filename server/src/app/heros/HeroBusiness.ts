@@ -1,7 +1,7 @@
-import HeroRepository from './../repositories/HeroRepository';
+import HeroRepository from './HeroRepository';
 import IHeroBusiness from './interfaces/HeroBusiness';
-import IHeroModel from './../models/interfaces/HeroModel';
-import HeroModel from './../models/HeroModel';
+import IHeroModel from './interfaces/HeroModel';
+import HeroModel from './HeroModel';
 
 class HeroBusiness implements IHeroBusiness {
     private _heroRepository: HeroRepository;

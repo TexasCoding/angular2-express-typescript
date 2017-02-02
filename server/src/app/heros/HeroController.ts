@@ -1,10 +1,10 @@
 import * as express from 'express';
 
-import HeroBusiness from './../business/HeroBusiness';
-import IBaseController from './BaseController';
-import IHeroModel from './../models/interfaces/HeroModel';
+import HeroBusiness from './HeroBusiness';
+import IBaseController from './../../lib/controllers/BaseController';
+import IHeroModel from './interfaces/HeroModel';
 
-class HeroController {
+class HeroController implements IBaseController<HeroBusiness> {
 
     create(req: express.Request, res: express.Response): void {
         try {

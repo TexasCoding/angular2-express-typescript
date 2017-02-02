@@ -1,6 +1,6 @@
 import * as express from 'express';
 
-import HeroRoutes from './HeroRoutes';
+import HeroRoutes from './../app/heros/HeroRoutes';
 
 const app = express();
 

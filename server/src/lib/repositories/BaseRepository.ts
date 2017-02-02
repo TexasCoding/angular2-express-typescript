@@ -1,6 +1,5 @@
 import IRead from './interfaces/Read';
 import IWrite from './interfaces/Write';
-import IHeroModel from './../models/interfaces/HeroModel';
 
 import * as mongoose from 'mongoose';
 

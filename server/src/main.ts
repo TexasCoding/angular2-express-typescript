@@ -5,7 +5,7 @@ import * as dotenv from 'dotenv';
 
 dotenv.config();
 
-import BaseRoutes from './app/routes/BaseRoutes';
+import BaseRoutes from './lib/BaseRoutes';
 
 const port: number = process.env.PORT || 3000;
 const env: string = process.env.NODE_ENV || 'developement';

@@ -1,5 +1,5 @@
-import DataAccess from '../../../config/database/Database';
-import IHeroModel from './../../models/interfaces/HeroModel';
+import DataAccess from '../../config/database/Database';
+import IHeroModel from './interfaces/HeroModel';
 
 const mongoose = DataAccess.mongooseInstance;
 const mongooseConnection = DataAccess.mongooseConnection;

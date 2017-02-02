@@ -4,4 +4,5 @@ import Write from './common/Write';
 interface BaseBusiness<T> extends Read<T>, Write<T> {
 }
 
+
 export default BaseBusiness;
