@@ -1,9 +1,21 @@
+/**
+ * Created on Sun Feb 01 2017
+ *
+ * Copyright (c) 2016 - Jeff West
+ * Github URL https://github.com/jeff10278
+ */
+
 import * as express from 'express';
 
 import HeroRoutes from './../app/heros/HeroRoutes';
 
 const app = express();
 
+/**
+ * @param  {} {app.use('/'
+ * @param  {} newHeroRoutes(
+ * @param  {} .routes
+ */
 class BaseRoutes {
     get routes() {
         app.use('/', new HeroRoutes().routes);

@@ -1,11 +1,26 @@
+/**
+ * Created on Sun Feb 01 2017
+ *
+ * Copyright (c) 2016 - Jeff West
+ * Github URL https://github.com/jeff10278
+ */
+
 import * as express from 'express';
 
 import HeroBusiness from './HeroBusiness';
 import IBaseController from './../../lib/controllers/BaseController';
 import IHeroModel from './interfaces/HeroModel';
 
+/**
+ * @param  {express.Request} req
+ * @param  {express.Response} res
+ */
 class HeroController implements IBaseController<HeroBusiness> {
 
+    /**
+     * @param  {express.Request} req
+     * @param  {express.Response} res
+     */
     create(req: express.Request, res: express.Response): void {
         try {
 
@@ -25,6 +40,11 @@ class HeroController implements IBaseController<HeroBusiness> {
 
         }
     }
+
+    /**
+     * @param  {express.Request} req
+     * @param  {express.Response} res
+     */
     update(req: express.Request, res: express.Response): void {
         try {
             const hero: IHeroModel = <IHeroModel>req.body;
@@ -44,6 +64,11 @@ class HeroController implements IBaseController<HeroBusiness> {
 
         }
     }
+
+    /**
+     * @param  {express.Request} req
+     * @param  {express.Response} res
+     */
     delete(req: express.Request, res: express.Response): void {
         try {
 
@@ -63,6 +88,11 @@ class HeroController implements IBaseController<HeroBusiness> {
 
         }
     }
+
+    /**
+     * @param  {express.Request} req
+     * @param  {express.Response} res
+     */
     retrieve(req: express.Request, res: express.Response): void {
         try {
 
@@ -80,6 +110,11 @@ class HeroController implements IBaseController<HeroBusiness> {
 
         }
     }
+
+    /**
+     * @param  {express.Request} req
+     * @param  {express.Response} res
+     */
     findById(req: express.Request, res: express.Response): void {
         try {
 
