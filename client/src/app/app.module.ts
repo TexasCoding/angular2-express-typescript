@@ -1,20 +1,36 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { routing } from './app.routing';
+
+import { HeroesComponent } from './components/heroes/heroes.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { HeroDetailComponent } from './components/heroDetail/hero-detail.component';
+
+import { HeroService } from './services/hero.service';
+
+import { BrowserXhr } from '@angular/http';
+import {CustExtBrowserXhr} from './cust-ext-browser-xhr';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
     BrowserModule,
+    HttpModule,
     FormsModule,
-    HttpModule
+    routing
   ],
-  providers: [],
+  declarations: [
+    AppComponent,
+    HeroesComponent,
+    DashboardComponent,
+    HeroDetailComponent
+  ],
+  providers: [
+    HeroService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,26 @@
-<h1>
-  {{title}}
-</h1>
+<nav class="nav has-shadow">
+  <div class="container">
+    <div class="nav-left">
+      <a class="nav-item">
+        <h1>{{ title }}</h1>
+      </a>
+      <a routerLink="/dashboard" routerLinkActive="active" class="nav-item is-tab">Dashboard</a>
+      <a routerLink="/heroes" routerLinkActive="active" class="nav-item is-tab">Heroes</a>
+    </div>
+    <span class="nav-toggle">
+      <span></span>
+    <span></span>
+    <span></span>
+    </span>
+    <div class="nav-right nav-menu">
+      <a class="nav-item is-tab">Login</a>
+      <a class="nav-item is-tab">Log out</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <section class="section">
+    <router-outlet></router-outlet>
+  </section>
+</div>

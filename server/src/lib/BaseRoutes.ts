@@ -9,7 +9,18 @@ import * as express from 'express';
 
 import HeroRoutes from './../app/heros/HeroRoutes';
 
+import * as cors from 'cors';
+
 const app = express();
+
+const corsOptions = {
+  origin: '*',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+
+app.options('*', cors(corsOptions));
+
+app.use(cors(corsOptions));
 
 /**
  * @param  {} {app.use('/'
